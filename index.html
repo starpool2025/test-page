@@ -40,6 +40,31 @@
         .button-link:hover {
             background-color: #2980b9; /* Darker shade on hover */
         }
+
+        /* Scrolling banner style */
+        .scrolling-banner {
+            background-color: #3498db;
+            color: white;
+            font-size: 18px;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        .scrolling-banner-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 10s linear infinite;
+        }
+        /* Animation for scrolling text from right to left */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 <body>
@@ -59,6 +84,13 @@
 <p><a href="https://starpool2025.github.io/fixtures/" class="button-link">Fixtures & Results</a></p>
 <p><a href="" class="button-link">Player Form Table (To start 13/03/2025)</a></p>
 <p><a href="https://starpool2025.github.io/form-prev/" class="button-link">Player Form Table (Last Season)</a></p>
+
+<!-- Scrolling Banner -->
+<div class="scrolling-banner">
+    <div class="scrolling-banner-content">
+        <p>Don't miss the next match! Davy Lamp, Cup R1, 06/03/2025 at The Star!</p>
+    </div>
+</div>
 
 </body>
 </html>
