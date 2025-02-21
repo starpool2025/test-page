@@ -24,6 +24,23 @@
             font-size: 18px;
             margin: 10px 0;
         }
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
         /* CSS to make the hyperlink look like a button */
         .button-link {
             display: inline-block;
@@ -51,18 +68,40 @@
     <div class="sub-header" style="padding-left: 10px;">Star Team placement history since joining the Long Eaton & District Pool League.</div>
 </section>
 <section>
-    <div class="sub-header">Division 1</div>
-    <div class="sub-header">2nd</div>
-    <div class="sub-header">Division 1</div>
-    <div class="sub-header">3rd</div>
-    <div class="sub-header">Division 1</div>
-    <div class="sub-header">~1st</div>
-    <div class="sub-header">Division 2</div>
-    <div class="sub-header">1st</div>
-    <div class="sub-header">Division 3</div>
-    <div class="sub-header">1st</div>
-    <div class="sub-header">Division 4</div>
-    <div class="sub-header">1st</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Division</th>
+                <th>Placement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Division 1</td>
+                <td>2nd</td>
+            </tr>
+            <tr>
+                <td>Division 1</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Division 1</td>
+                <td>~1st</td>
+            </tr>
+            <tr>
+                <td>Division 2</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>Division 3</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>Division 4</td>
+                <td>1st</td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
 <p><a href="https://starpool2025.github.io/home/" class="button-link">Home</a></p>
