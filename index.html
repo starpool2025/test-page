@@ -25,7 +25,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            align-items: flex-start;
+            align-items: flex-start; /* Align the banners to the left */
             padding: 20px;
         }
 
@@ -36,32 +36,32 @@
         }
 
         .name {
-            font-size: 18px;
+            font-size: 18px; /* Adjusted size for readability */
             font-weight: bold;
-            text-align: left;
-            min-width: 150px;
+            text-align: left; /* Align names to the left */
+            min-width: 150px; /* Fixed width for consistency */
         }
 
         .banner-box {
-            width: 150px;
-            height: 20px;
+            width: 150px; /* Reduced width by 50% */
+            height: 20px; /* Reduced height by 50% */
             overflow: hidden;
             background-color: #333;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 8px;
+            font-size: 8px; /* Reduced font size by 50% */
             font-weight: bold;
-            padding: 5px;
+            padding: 5px; /* Reduced padding by 50% */
             border-radius: 5px;
-            position: relative;
+            position: relative; /* Ensure position for scrolling */
         }
 
         .scrolling-banner {
             position: absolute;
             white-space: nowrap;
-            animation: scroll 10s linear infinite;
+            animation: scroll 10s linear infinite; /* Same speed for all banners */
         }
 
         @keyframes scroll {
@@ -73,44 +73,23 @@
             }
         }
 
-        .fireball {
-            position: absolute;
-            right: -20px;
-            animation: fireball-animation 1s linear infinite;
-            font-size: 18px;
-            opacity: 0;
-        }
-
-        @keyframes fireball-animation {
-            0% {
-                transform: translateX(0) scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: translateX(10px) scale(1.2);
-                opacity: 1;
-            }
-            100% {
-                transform: translateX(0) scale(1);
-                opacity: 0;
-            }
-        }
-        
+        /* CSS to make the hyperlink look like a button */
         .button-link {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #3498db;
+            background-color: #3498db; /* Button color */
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 5px; /* Rounded corners */
             text-align: center;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease; /* Smooth transition */
             margin-top: 20px;
         }
 
+        /* Button hover effect */
         .button-link:hover {
-            background-color: #2980b9;
+            background-color: #2980b9; /* Darker shade on hover */
         }
     </style>
 </head>
@@ -121,50 +100,100 @@
 </header>
 
 <section class="banner-container">
+    <!-- Banners for Shaun, Dean, and Carl -->
     <div class="banner">
         <div class="name">Shaun Edwards:</div>
         <div class="banner-box">
             <div class="scrolling-banner">WWWLLLWWW</div>
-            <span class="fireball">🔥</span>
         </div>
     </div>
     <div class="banner">
         <div class="name">Dean Nixon:</div>
         <div class="banner-box">
             <div class="scrolling-banner">WWWLLLWLWLLL</div>
-            <span class="fireball">🔥</span>
         </div>
     </div>
     <div class="banner">
         <div class="name">Carl Bilbey:</div>
         <div class="banner-box">
             <div class="scrolling-banner">WWLLLLWWLLW</div>
-            <span class="fireball">🔥</span>
         </div>
     </div>
-    <!-- More banners... -->
+    <div class="banner">
+        <div class="name">Sean Day:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder1</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">Michael Urbacz:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder2</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">Andy Saxton:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder3</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">Dale Smith:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder4</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">Ed Pidduck:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder5</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">Gaz Rogers:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder6</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">Greg Crowson:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder7</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">James I'Anson:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder8</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">John James:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder9</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">Matt Keys:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder10</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">Max Newton:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder11</div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="name">Olly Brooks:</div>
+        <div class="banner-box">
+            <div class="scrolling-banner">Placeholder12</div>
+        </div>
+    </div>
 </section>
 
 <p><a href="https://starpool2025.github.io/home/" class="button-link">Home</a></p>
-
-<script>
-    // Check if a string has 3 or more consecutive "W"s
-    function hasConsecutiveW(str) {
-        return /WWW/.test(str);
-    }
-
-    // Apply fireball animation if condition is met
-    document.querySelectorAll('.scrolling-banner').forEach(banner => {
-        const text = banner.innerText;
-        const fireball = banner.parentElement.querySelector('.fireball');
-        
-        if (hasConsecutiveW(text)) {
-            fireball.style.opacity = '1'; // Show fireball if condition is met
-        } else {
-            fireball.style.opacity = '0'; // Hide fireball if condition is not met
-        }
-    });
-</script>
 
 </body>
 </html>
