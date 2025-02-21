@@ -28,7 +28,7 @@
             padding: 5px;
             margin-left: 10px;
         }
-                /* CSS to make the hyperlink look like a button */
+        /* CSS to make the hyperlink look like a button */
         .button-link {
             display: inline-block;
             padding: 10px 20px;
@@ -45,13 +45,44 @@
         .button-link:hover {
             background-color: #2980b9; /* Darker shade on hover */
         }
+        /* CSS for the Reset button */
+        .reset-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e74c3c; /* Red color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .reset-button:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
     </style>
+    <script>
+        // JavaScript function to reset the input fields
+        function resetForm() {
+            document.getElementById("match1-bell").value = 0;
+            document.getElementById("match1-ghq").value = 0;
+            document.getElementById("match2-davy").value = 0;
+            document.getElementById("match2-zingari").value = 0;
+            document.getElementById("match3-curzon").value = 0;
+            document.getElementById("match3-star").value = 0;
+            document.getElementById("match4-stumble").value = 0;
+            document.getElementById("match4-lion").value = 0;
+            document.getElementById("match5-cue").value = 0;
+            document.getElementById("match5-farm").value = 0;
+        }
+    </script>
 </head>
 <body>
 
     <p>
         <a href="https://starpool2025.github.io/home/" class="button-link">Home</a>
-        <a href="#" class="button-link">Submit Scores</a> <!-- New Submit Scores button -->
+        <a href="#" class="button-link">Submit Scores</a>
+        <a href="#" class="reset-button" onclick="resetForm()">Reset</a> <!-- Reset button -->
     </p>
     
     <div class="match">
