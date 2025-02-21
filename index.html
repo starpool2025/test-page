@@ -28,18 +28,20 @@
         }
         .form-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 20px;
         }
         .match {
             display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            width: 48%; /* 2 items per row */
+            flex-direction: column;
+            gap: 10px;
         }
         .match label {
-            margin-right: 10px;
-            width: 70px; /* Set a fixed width for the labels */
+            font-weight: bold;
+        }
+        .match .teams {
+            display: flex;
+            justify-content: space-between;
         }
         .score-input {
             width: 50px;
@@ -68,27 +70,36 @@
         <form>
             <div class="form-container">
                 <div class="match">
-                    <label for="curzon-ph">Curzon PH</label>
-                    <input type="number" id="curzon-ph" name="curzon-ph" class="score-input" value="0">
-                    <span>-</span>
-                    <input type="number" id="star" name="star" class="score-input" value="0">
-                    <label for="star">Star</label>
+                    <label>Match 1</label>
+                    <div class="teams">
+                        <span>Curzon PH</span>
+                        <input type="number" id="curzon-ph" name="curzon-ph" class="score-input" value="0">
+                        <span>-</span>
+                        <input type="number" id="star" name="star" class="score-input" value="0">
+                        <span>Star</span>
+                    </div>
                 </div>
 
                 <div class="match">
-                    <label for="cue-club">Cue Club</label>
-                    <input type="number" id="cue-club" name="cue-club" class="score-input" value="0">
-                    <span>-</span>
-                    <input type="number" id="west-end-ghq" name="west-end-ghq" class="score-input" value="0">
-                    <label for="west-end-ghq">West End GHQ</label>
+                    <label>Match 2</label>
+                    <div class="teams">
+                        <span>Cue Club</span>
+                        <input type="number" id="cue-club" name="cue-club" class="score-input" value="0">
+                        <span>-</span>
+                        <input type="number" id="west-end-ghq" name="west-end-ghq" class="score-input" value="0">
+                        <span>West End GHQ</span>
+                    </div>
                 </div>
 
                 <div class="match">
-                    <label for="sailors">Sailors</label>
-                    <input type="number" id="sailors" name="sailors" class="score-input" value="0">
-                    <span>-</span>
-                    <input type="number" id="soldiers" name="soldiers" class="score-input" value="0">
-                    <label for="soldiers">Soldiers</label>
+                    <label>Match 3</label>
+                    <div class="teams">
+                        <span>Sailors</span>
+                        <input type="number" id="sailors" name="sailors" class="score-input" value="0">
+                        <span>-</span>
+                        <input type="number" id="soldiers" name="soldiers" class="score-input" value="0">
+                        <span>Soldiers</span>
+                    </div>
                 </div>
             </div>
             <button type="submit">Submit Scores</button>
