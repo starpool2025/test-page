@@ -3,107 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thursday Super 5</title>
+    <title>Match Scores</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 20px;
             background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 375px;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
         }
         .match {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            margin-bottom: 20px;
         }
-        .match label {
-            font-weight: bold;
+        .match h2 {
+            color: #333;
         }
-        .match .teams {
-            display: flex;
-            justify-content: space-between;
+        .match p {
+            font-size: 18px;
+            color: #555;
         }
-        .score-input {
+        .match input {
             width: 50px;
             text-align: center;
-            margin: 0 10px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #45a049;
+            font-size: 18px;
+            padding: 5px;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Thursday Super 5</h1>
-        <form>
-            <div class="form-container">
-                <div class="match">
-                    <label>Match 1</label>
-                    <div class="teams">
-                        <span>Curzon PH</span>
-                        <input type="number" id="curzon-ph" name="curzon-ph" class="score-input" value="0">
-                        <span>-</span>
-                        <input type="number" id="star" name="star" class="score-input" value="0">
-                        <span>Star</span>
-                    </div>
-                </div>
 
-                <div class="match">
-                    <label>Match 2</label>
-                    <div class="teams">
-                        <span>Cue Club</span>
-                        <input type="number" id="cue-club" name="cue-club" class="score-input" value="0">
-                        <span>-</span>
-                        <input type="number" id="west-end-ghq" name="west-end-ghq" class="score-input" value="0">
-                        <span>West End GHQ</span>
-                    </div>
-                </div>
-
-                <div class="match">
-                    <label>Match 3</label>
-                    <div class="teams">
-                        <span>Sailors</span>
-                        <input type="number" id="sailors" name="sailors" class="score-input" value="0">
-                        <span>-</span>
-                        <input type="number" id="soldiers" name="soldiers" class="score-input" value="0">
-                        <span>Soldiers</span>
-                    </div>
-                </div>
-            </div>
-            <button type="submit">Submit Scores</button>
-        </form>
+    <div class="match">
+        <h2>Match 1</h2>
+        <p>Curzon PH - <input type="number" value="0" id="match1-curzon"> 
+        Star - <input type="number" value="0" id="match1-star"></p>
     </div>
+
+    <div class="match">
+        <h2>Match 2</h2>
+        <p>Cue Club - <input type="number" value="0" id="match2-cue"> 
+        West End GHQ - <input type="number" value="0" id="match2-west"></p>
+    </div>
+
+    <div class="match">
+        <h2>Match 3</h2>
+        <p>Sailors - <input type="number" value="0" id="match3-sailors"> 
+        Soldiers - <input type="number" value="0" id="match3-soldiers"></p>
+    </div>
+
 </body>
 </html>
