@@ -7,7 +7,6 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -16,31 +15,31 @@
             background-color: #2c3e50;
             color: white;
             padding: 20px 0;
+            text-align: center;
         }
         h1 {
             margin: 0;
         }
-        .sub-header {
-            font-size: 18px;
-            margin: 10px 0;
-        }
+
         .banner-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            align-items: center;
+            gap: 10px;
+            align-items: flex-start; /* Align the banners to the left */
+            padding: 20px;
         }
 
         .banner {
             display: flex;
-            flex-direction: row;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
         }
 
         .name {
             font-size: 18px; /* Adjusted size for readability */
             font-weight: bold;
+            text-align: left; /* Align names to the left */
+            min-width: 150px; /* Fixed width for consistency */
         }
 
         .banner-box {
@@ -83,12 +82,13 @@
             text-align: center;
             font-weight: bold;
             transition: background-color 0.3s ease; /* Smooth transition */
+            margin-top: 20px;
         }
+
         /* Button hover effect */
         .button-link:hover {
             background-color: #2980b9; /* Darker shade on hover */
         }
-
     </style>
 </head>
 <body>
