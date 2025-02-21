@@ -52,11 +52,10 @@
             white-space: nowrap;
             position: relative;
             
-           /* Flexbox for centering content */
-        display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center;     /* Center vertically */
-            
+            /* Flexbox for centering content */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
         }
         .scrolling-banner-content {
             display: inline-block;
@@ -70,6 +69,37 @@
             }
             100% {
                 transform: translateX(-100%);
+            }
+        }
+
+        /* Second scrolling banner style */
+        .scrolling-banner-2 {
+            background-color: #e74c3c; /* Changed to red for distinction */
+            color: white;
+            font-size: 18px;
+            height: 35px;  /* Set a fixed height */
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            
+            /* Flexbox for centering content */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+        }
+        .scrolling-banner-content-2 {
+            display: inline-block;
+            padding-right: 100%;
+            animation: scroll-right 18s linear infinite;
+        }
+        /* Animation for scrolling text from left to right */
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
             }
         }
     </style>
@@ -92,10 +122,17 @@
 <p><a href="https://starpool2025.github.io/form-curr/" class="button-link">Player Performance (from 14/03/2025)</a></p>
 <p><a href="https://starpool2025.github.io/form-prev/" class="button-link">Player Performance (Last Season)</a></p>
 
-<!-- Scrolling Banner -->
+<!-- First Scrolling Banner -->
 <div class="scrolling-banner">
     <div class="scrolling-banner-content">
         <p>Latest News : Welcome to The Star, new signing Max Newton and the overdue return of James I'Anson. #StarBoom!</p>
+    </div>
+</div>
+
+<!-- Second Scrolling Banner -->
+<div class="scrolling-banner-2">
+    <div class="scrolling-banner-content-2">
+        <p>Upcoming Event: Don't miss our charity event next Saturday! Join us for a great cause.</p>
     </div>
 </div>
 
