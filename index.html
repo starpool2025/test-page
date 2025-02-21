@@ -51,7 +51,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 8px; /* Reduced font size by 50% */
+            font-size: 10px; /* Increased font size by 25% */
             font-weight: bold;
             padding: 5px; /* Reduced padding by 50% */
             border-radius: 5px;
@@ -101,91 +101,91 @@
 
 <section class="banner-container">
     <!-- Banners for Shaun, Dean, and Carl -->
-    <div class="banner">
+    <div class="banner" data-name="Shaun Edwards">
         <div class="name">Shaun Edwards:</div>
         <div class="banner-box">
             <div class="scrolling-banner">WWWLLLWWW</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Dean Nixon">
         <div class="name">Dean Nixon:</div>
         <div class="banner-box">
             <div class="scrolling-banner">WWWLLLWLWLLL</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Carl Bilbey">
         <div class="name">Carl Bilbey:</div>
         <div class="banner-box">
             <div class="scrolling-banner">WWLLLLWWLLW</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Sean Day">
         <div class="name">Sean Day:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder1</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Michael Urbacz">
         <div class="name">Michael Urbacz:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder2</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Andy Saxton">
         <div class="name">Andy Saxton:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder3</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Dale Smith">
         <div class="name">Dale Smith:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder4</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Ed Pidduck">
         <div class="name">Ed Pidduck:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder5</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Gaz Rogers">
         <div class="name">Gaz Rogers:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder6</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Greg Crowson">
         <div class="name">Greg Crowson:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder7</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="James I'Anson">
         <div class="name">James I'Anson:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder8</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="John James">
         <div class="name">John James:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder9</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Matt Keys">
         <div class="name">Matt Keys:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder10</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Max Newton">
         <div class="name">Max Newton:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder11</div>
         </div>
     </div>
-    <div class="banner">
+    <div class="banner" data-name="Olly Brooks">
         <div class="name">Olly Brooks:</div>
         <div class="banner-box">
             <div class="scrolling-banner">Placeholder12</div>
@@ -196,19 +196,32 @@
 <p><a href="https://starpool2025.github.io/home/" class="button-link">Home</a></p>
 
 <script>
+    // Sort the banners alphabetically based on the name
+    const bannerContainer = document.querySelector('.banner-container');
+    const banners = Array.from(bannerContainer.querySelectorAll('.banner'));
+
+    banners.sort((a, b) => {
+        const nameA = a.getAttribute('data-name').toLowerCase();
+        const nameB = b.getAttribute('data-name').toLowerCase();
+        return nameA.localeCompare(nameB);
+    });
+
+    // Append the sorted banners back to the container
+    banners.forEach(banner => {
+        bannerContainer.appendChild(banner);
+    });
+
     // Check the last character of the banner text and change the background color accordingly
-    const banners = document.querySelectorAll('.banner-box');
-    
     banners.forEach(banner => {
         const scrollingBanner = banner.querySelector('.scrolling-banner').innerText;
         const lastChar = scrollingBanner.slice(-1);
         
         if (lastChar === 'W') {
-            banner.style.backgroundColor = 'green';  // Green for 'W'
+            banner.querySelector('.banner-box').style.backgroundColor = 'green';  // Green for 'W'
         } else if (lastChar === 'L') {
-            banner.style.backgroundColor = 'red';    // Red for 'L'
+            banner.querySelector('.banner-box').style.backgroundColor = 'red';    // Red for 'L'
         } else {
-            banner.style.backgroundColor = 'orange'; // Amber/orange for other cases
+            banner.querySelector('.banner-box').style.backgroundColor = 'orange'; // Amber/orange for other cases
         }
     });
 </script>
