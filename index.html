@@ -20,35 +20,31 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 375px; /* Increased width by 25% */
+            width: 375px;
         }
         h1 {
             color: #333;
+            text-align: center;
+        }
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .match {
-            margin: 15px 0;
             display: flex;
-            flex-direction: column; /* Arrange label and inputs vertically */
             align-items: center;
-            font-size: 18px;
-            width: 100%;
+            margin-bottom: 15px;
+            width: 48%; /* 2 items per row */
         }
         .match label {
-            margin-bottom: 5px; /* Add some space between label and input */
+            margin-right: 10px;
+            width: 70px; /* Set a fixed width for the labels */
         }
         .score-input {
             width: 50px;
             text-align: center;
             margin: 0 10px;
-        }
-        .match span {
-            margin: 0 10px;
-        }
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         button {
             margin-top: 20px;
@@ -59,6 +55,7 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
+            width: 100%;
         }
         button:hover {
             background-color: #45a049;
@@ -69,30 +66,31 @@
     <div class="container">
         <h1>Thursday Super 5</h1>
         <form>
-            <div class="match">
-                <label for="curzon-ph">Curzon PH</label>
-                <input type="number" id="curzon-ph" name="curzon-ph" class="score-input" value="0">
-                <span>-</span>
-                <input type="number" id="star" name="star" class="score-input" value="0">
-                <label for="star">Star</label>
-            </div>
+            <div class="form-container">
+                <div class="match">
+                    <label for="curzon-ph">Curzon PH</label>
+                    <input type="number" id="curzon-ph" name="curzon-ph" class="score-input" value="0">
+                    <span>-</span>
+                    <input type="number" id="star" name="star" class="score-input" value="0">
+                    <label for="star">Star</label>
+                </div>
 
-            <div class="match">
-                <label for="cue-club">Cue Club</label>
-                <input type="number" id="cue-club" name="cue-club" class="score-input" value="0">
-                <span>-</span>
-                <input type="number" id="west-end-ghq" name="west-end-ghq" class="score-input" value="0">
-                <label for="west-end-ghq">West End GHQ</label>
-            </div>
+                <div class="match">
+                    <label for="cue-club">Cue Club</label>
+                    <input type="number" id="cue-club" name="cue-club" class="score-input" value="0">
+                    <span>-</span>
+                    <input type="number" id="west-end-ghq" name="west-end-ghq" class="score-input" value="0">
+                    <label for="west-end-ghq">West End GHQ</label>
+                </div>
 
-            <div class="match">
-                <label for="sailors">Sailors</label>
-                <input type="number" id="sailors" name="sailors" class="score-input" value="0">
-                <span>-</span>
-                <input type="number" id="soldiers" name="soldiers" class="score-input" value="0">
-                <label for="soldiers">Soldiers</label>
+                <div class="match">
+                    <label for="sailors">Sailors</label>
+                    <input type="number" id="sailors" name="sailors" class="score-input" value="0">
+                    <span>-</span>
+                    <input type="number" id="soldiers" name="soldiers" class="score-input" value="0">
+                    <label for="soldiers">Soldiers</label>
+                </div>
             </div>
-
             <button type="submit">Submit Scores</button>
         </form>
     </div>
