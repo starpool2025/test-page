@@ -196,13 +196,19 @@
 <p><a href="https://starpool2025.github.io/home/" class="button-link">Home</a></p>
 
 <script>
-    // Check if the last character of the banner text is 'W' and change the background color
+    // Check the last character of the banner text and change the background color accordingly
     const banners = document.querySelectorAll('.banner-box');
     
     banners.forEach(banner => {
         const scrollingBanner = banner.querySelector('.scrolling-banner').innerText;
-        if (scrollingBanner.slice(-1) === 'W') {
-            banner.style.backgroundColor = 'green';
+        const lastChar = scrollingBanner.slice(-1);
+        
+        if (lastChar === 'W') {
+            banner.style.backgroundColor = 'green';  // Green for 'W'
+        } else if (lastChar === 'L') {
+            banner.style.backgroundColor = 'red';    // Red for 'L'
+        } else {
+            banner.style.backgroundColor = 'orange'; // Amber/orange for other cases
         }
     });
 </script>
