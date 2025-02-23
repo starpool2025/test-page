@@ -52,11 +52,10 @@
             white-space: nowrap;
             position: relative;
             
-           /* Flexbox for centering content */
-        display: flex;
-        justify-content: flex-start; /* Ensure content starts at the left */
-        align-items: center;     /* Center vertically */
-            
+            /* Flexbox for centering content */
+            display: flex;
+            justify-content: flex-start; /* Ensure content starts at the left */
+            align-items: center;     /* Center vertically */
         }
         .scrolling-banner-content {
             display: inline-block;
@@ -72,7 +71,32 @@
                 transform: translateX(-100%);
             }
         }
+        /* Style for the form */
+        .user-form {
+            display: none;
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .user-form input, .user-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
     </style>
+    <script>
+        function toggleForm() {
+            const form = document.getElementById('userForm');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </head>
 <body>
 
@@ -80,7 +104,18 @@
     <h1>The Star Pool Team</h1>
 </header>
 
+<!-- Button to show the form -->
+<a href="javascript:void(0);" class="button-link" onclick="toggleForm()">Open User Form</a>
 
+<!-- The User Form -->
+<div id="userForm" class="user-form">
+    <h2>User Information</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
 
 </body>
 </html>
