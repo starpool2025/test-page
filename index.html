@@ -67,9 +67,38 @@
         }
     </style>
     <script>
+        // Initialize EmailJS
+        (function () {
+            emailjs.init("oHVM4Tzwym18dhdtE"); // Replace with your EmailJS user ID
+        })();
+
         function toggleForm() {
             const form = document.getElementById('userForm');
             form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function submitForm(event) {
+            event.preventDefault();  // Prevent the form from submitting normally
+
+            const name = document.getElementById('name').value;
+            const match1 = document.getElementById('match1').value;
+            const match2 = document.getElementById('match2').value;
+            const match3 = document.getElementById('match3').value;
+
+            const emailData = {
+                name: name,
+                match1: match1,
+                match2: match2,
+                match3: match3
+            };
+
+            // Send email with EmailJS
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", emailData)
+                .then(function(response) {
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    alert('Error sending email:', error);
+                });
         }
     </script>
 </head>
@@ -85,7 +114,7 @@
 <!-- The User Form -->
 <div id="userForm" class="user-form">
     <h2>User Information</h2>
-    <form>
+    <form onsubmit="submitForm(event)">
         <label for="name">Name:</label>
         <input type="text" id="name" placeholder="Your Name" required>
 
