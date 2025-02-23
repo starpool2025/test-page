@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player Form</title>
+    <title>League Fixtures & Results 2025</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -15,65 +16,31 @@
             background-color: #2c3e50;
             color: white;
             padding: 20px 0;
-            text-align: center;
+            font-size: 15px; /* Adjust header text size */
         }
         h1 {
             margin: 0;
         }
-
-        .banner-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: flex-start; /* Align the banners to the left */
-            padding: 20px;
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
         }
-
-        .banner {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-.name {
-    font-size: 15.3px; /* Reduced size by 15% */
-    font-weight: bold;
-    text-align: left; /* Align names to the left */
-    min-width: 150px; /* Fixed width for consistency */
+        th, td {
+            border: 1px solid #ccc;
+            padding: 11px;
+            text-align: center;
+            word-wrap: break-word; /* Allow text to wrap within cells */
 }
-
-
-        .banner-box {
-            width: 150px; /* Reduced width by 50% */
-            height: 20px; /* Reduced height by 50% */
-            overflow: hidden;
-            background-color: #333;
+        th {
+            background-color: #2c3e50;
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 10px; /* Increased font size by 25% */
-            font-weight: bold;
-            padding: 5px; /* Reduced padding by 50% */
-            border-radius: 5px;
-            position: relative; /* Ensure position for scrolling */
+            font-size: 12px; /* Adjust header text size */
         }
-
-        .scrolling-banner {
-            position: absolute;
-            white-space: nowrap;
-            animation: scroll 10s linear infinite; /* Same speed for all banners */
+        td {
+            background-color: #fff;
+            font-size: 10px; /* Adjust data cell text size */
         }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
         /* CSS to make the hyperlink look like a button */
         .button-link {
             display: inline-block;
@@ -85,153 +52,169 @@
             text-align: center;
             font-weight: bold;
             transition: background-color 0.3s ease; /* Smooth transition */
-            margin-top: 20px;
         }
-
         /* Button hover effect */
         .button-link:hover {
             background-color: #2980b9; /* Darker shade on hover */
         }
-            /* Add this to the existing styles */
-    p {
-        display: flex;
-        justify-content: center; /* Align the button to the center */
-        margin: 0; /* Remove any default margin */
-    }
+        /* Styling for the text under the table */
+        .fixture-message {
+            font-size: 10px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #e74c3c; /* Red color for emphasis */
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Player Form (Testing)</h1>
+    <h1>League Fixtures & Results 2025</h1>
 </header>
-<p><a href="https://starpool2025.github.io/home/" class="button-link">Home</a></p>
-    
-<section class="banner-container">
-    <!-- Banners for Shaun, Dean, and Carl -->
-    <div class="banner" data-name="Shaun Edwards">
-        <div class="name">Shaun Edwards:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">WWWLLLWWW</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Dean Nixon">
-        <div class="name">Dean Nixon:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">WWWLLLWLWLLL</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Carl Bilbey">
-        <div class="name">Carl Bilbey:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">WWLLLLWWLLW</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Sean Day">
-        <div class="name">Sean Day:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">Placeholder1</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Michael Urbacz">
-        <div class="name">Michael Urbacz:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">Placeholder2</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Andy Saxton">
-        <div class="name">Andy Saxton:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">WLWLWLWLWLW</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Dale Smith">
-        <div class="name">Dale Smith:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">LLWWWW</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Ed Pidduck">
-        <div class="name">Ed Pidduck:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">Placeholder5</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Gaz Rogers">
-        <div class="name">Gaz Rogers:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">WWLLLLWWWWW</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Greg Crowson">
-        <div class="name">Greg Crowson:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">Placeholder7</div>
-        </div>
-    </div>
-    <div class="banner" data-name="James I'Anson">
-        <div class="name">James I'Anson:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">WLWLWLLL</div>
-        </div>
-    </div>
-    <div class="banner" data-name="John James">
-        <div class="name">John James:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">WWLLLLWLLL</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Matt Keys">
-        <div class="name">Matt Keys:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">Placeholder10</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Max Newton">
-        <div class="name">Max Newton:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">Placeholder11</div>
-        </div>
-    </div>
-    <div class="banner" data-name="Olly Brooks">
-        <div class="name">Olly Brooks:</div>
-        <div class="banner-box">
-            <div class="scrolling-banner">Placeholder12</div>
-        </div>
-    </div>
+
+<section>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Team</th>
+                <th>Result</th>
+                <th>Last Season</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>13/03/2025</td>
+                <td>Away</td>
+                <td>Curzon PH</td>
+                <td>0:0</td>
+                <td>Won 5:4</td>
+            </tr>
+            <tr>
+                <td>20/03/2025</td>
+                <td>Home</td>
+                <td>Stumble Vets</td>
+                <td>0:0</td>
+                <td>Won 5:4</td>
+            </tr>
+            <tr>
+                <td>27/03/2025</td>
+                <td>Away</td>
+                <td>Cue Club</td>
+                <td>0:0</td>
+                <td>Lost 6:3</td>
+            </tr>
+            <tr>
+                <td>03/04/2025</td>
+                <td>Home</td>
+                <td>White Lion Sndcr</td>
+                <td>0:0</td>
+                <td>-:-</td>
+            </tr>
+            <tr>
+                <td>17/04/2025</td>
+                <td>Home</td>
+                <td>Eaton Farm</td>
+                <td>0:0</td>
+                <td>-:-</td>
+            </tr>
+            <tr>
+                <td>24/04/2025</td>
+                <td>Away</td>
+                <td>Zingari Nomads</td>
+                <td>0:0</td>
+                <td>-:-</td>
+            </tr>
+            <tr>
+                <td>01/05/2025</td>
+                <td>Home</td>
+                <td>West End GHQ</td>
+                <td>0:0</td>
+                <td>Won 6:3</td>
+            </tr>
+            <tr>
+                <td>08/05/2025</td>
+                <td>Away</td>
+                <td>Bell Sawley</td>
+                <td>0:0</td>
+                <td>Won 5:4</td>
+            </tr>
+            <tr>
+                <td>22/05/2025</td>
+                <td>Home</td>
+                <td>Davy Lamp</td>
+                <td>0:0</td>
+                <td>Lost 5:4</td>
+            </tr>
+            <tr>
+                <td>29/05/2025</td>
+                <td>Home</td>
+                <td>Bell Sawley</td>
+                <td>0:0</td>
+                <td>Won 6:3</td>
+            </tr>
+            <tr>
+                <td>05/06/2025</td>
+                <td>Away</td>
+                <td>West End GHQ</td>
+                <td>0:0</td>
+                <td>Won 5:4</td>
+            </tr>
+            <tr>
+                <td>19/06/2025</td>
+                <td>Home</td>
+                <td>Zingari Nomads</td>
+                <td>0:0</td>
+                <td>-:-</td>
+            </tr>
+            <tr>
+                <td>26/06/2025</td>
+                <td>Away</td>
+                <td>Eaton Farm</td>
+                <td>0:0</td>
+                <td>-:-</td>
+            </tr>
+            <tr>
+                <td>03/07/2025</td>
+                <td>Away</td>
+                <td>White Lion Sndcr</td>
+                <td>0:0</td>
+                <td>-:-</td>
+            </tr>
+            <tr>
+                <td>17/07/2025</td>
+                <td>Home</td>
+                <td>Cue Club</td>
+                <td>0:0</td>
+                <td>Lost 5:4</td>
+            </tr>
+            <tr>
+                <td>24/07/2025</td>
+                <td>Away</td>
+                <td>Stumble Vets</td>
+                <td>0:0</td>
+                <td>Won 6:3</td>
+            </tr>
+            <tr>
+                <td>31/07/2025</td>
+                <td>Home</td>
+                <td>Curzon PH</td>
+                <td>0:0</td>
+                <td>Lost 5:4</td>
+            </tr>
+            <tr>
+                <td>07/08/2025</td>
+                <td>Away</td>
+                <td>Davy Lamp</td>
+                <td>0:0</td>
+                <td>Won 5:4</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="fixture-message">Match reports coming soon....</p>
 </section>
-
-
-<script>
-    // Sort the banners alphabetically based on the name
-    const bannerContainer = document.querySelector('.banner-container');
-    const banners = Array.from(bannerContainer.querySelectorAll('.banner'));
-
-    banners.sort((a, b) => {
-        const nameA = a.getAttribute('data-name').toLowerCase();
-        const nameB = b.getAttribute('data-name').toLowerCase();
-        return nameA.localeCompare(nameB);
-    });
-
-    // Append the sorted banners back to the container
-    banners.forEach(banner => {
-        bannerContainer.appendChild(banner);
-    });
-
-    // Check the last character of the banner text and change the background color accordingly
-    banners.forEach(banner => {
-        const scrollingBanner = banner.querySelector('.scrolling-banner').innerText;
-        const lastChar = scrollingBanner.slice(-1);
-        
-        if (lastChar === 'W') {
-            banner.querySelector('.banner-box').style.backgroundColor = 'green';  // Green for 'W'
-        } else if (lastChar === 'L') {
-            banner.querySelector('.banner-box').style.backgroundColor = 'red';    // Red for 'L'
-        } else {
-            banner.querySelector('.banner-box').style.backgroundColor = 'orange'; // Amber/orange for other cases
-        }
-    });
-</script>
-
+<p><a href="" class="button-link">Full Fixture PDF</a></p>
+<p><a href="https://starpool2025.github.io/home/" class="button-link">Home</a></p>
 </body>
 </html>
