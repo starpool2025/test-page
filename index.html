@@ -20,58 +20,20 @@
         h1 {
             margin: 0;
         }
-        .sub-header {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        /* CSS to make the hyperlink look like a button */
         .button-link {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #3498db; /* Button color */
+            background-color: #3498db;
             color: white;
             text-decoration: none;
-            border-radius: 5px; /* Rounded corners */
+            border-radius: 5px;
             text-align: center;
             font-weight: bold;
-            transition: background-color 0.3s ease; /* Smooth transition */
+            transition: background-color 0.3s ease;
         }
-        /* Button hover effect */
         .button-link:hover {
-            background-color: #2980b9; /* Darker shade on hover */
+            background-color: #2980b9;
         }
-
-        /* Scrolling banner style */
-        .scrolling-banner {
-            background-color: #006400; /* Changed to dark green */
-            color: white;
-            font-size: 18px;
-            height: 35px;  /* Set a fixed height */
-            padding: 10px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            
-            /* Flexbox for centering content */
-            display: flex;
-            justify-content: flex-start; /* Ensure content starts at the left */
-            align-items: center;     /* Center vertically */
-        }
-        .scrolling-banner-content {
-            display: inline-block;
-            padding-left: 100%;
-            animation: scroll-left 24s linear infinite;
-        }
-        /* Animation for scrolling text from right to left */
-        @keyframes scroll-left {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        /* Style for the form */
         .user-form {
             display: none;
             margin-top: 20px;
@@ -90,6 +52,19 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
+        .matches {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .match {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .match input {
+            width: 60px;
+            text-align: center;
+        }
     </style>
     <script>
         function toggleForm() {
@@ -105,14 +80,31 @@
 </header>
 
 <!-- Button to show the form -->
-<a href="javascript:void(0);" class="button-link" onclick="toggleForm()">Open User Form</a>
+<a href="javascript:void(0);" class="button-link" onclick="toggleForm()">Open Match Scores Form</a>
 
 <!-- The User Form -->
 <div id="userForm" class="user-form">
     <h2>User Information</h2>
     <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <div class="matches">
+            <h3>Match Scores</h3>
+            <div class="match">
+                <span>1. Star vs Curzon</span>
+                <input type="text" id="match1" value="0 - 0">
+            </div>
+            <div class="match">
+                <span>2. Sailors vs Cue Club</span>
+                <input type="text" id="match2" value="0 - 0">
+            </div>
+            <div class="match">
+                <span>3. Soldiers vs Stumble</span>
+                <input type="text" id="match3" value="0 - 0">
+            </div>
+        </div>
+
         <button type="submit">Submit</button>
     </form>
 </div>
